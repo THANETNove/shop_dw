@@ -148,58 +148,78 @@ if (!isset($_SESSION['username'])) {
             <img src="image/manu/a1.jpg" alt="สินค้า 1" class="product-img">
             <div class="product-name">สินค้า A</div>
             <div class="product-price">฿1,000</div>
-            <a href="#" class="product-price">฿1,000</a>
+            <button class="add-to-cart" data-name="สินค้า A" data-price="1000">เพิ่มลงตะกร้า</button>
         </div>
         <div class="product-card">
             <img src="image/manu/a6.jpg" alt="สินค้า 2" class="product-img">
             <div class="product-name">สินค้า B</div>
             <div class="product-price">฿1,200</div>
-            <a href="#" class="product-price-shop ">ซื้อสินค้า</a>
+            <button class="add-to-cart" data-name="สินค้า A" data-price="1000">เพิ่มลงตะกร้า</button>
         </div>
         <div class="product-card">
             <img src="image/manu/a7.jpg" alt="สินค้า 3" class="product-img">
             <div class="product-name">สินค้า C</div>
             <div class="product-price">฿1,500</div>
-            <a href="#" class="product-price-shop ">ซื้อสินค้า</a>
+            <button class="add-to-cart" data-name="สินค้า A" data-price="1000">เพิ่มลงตะกร้า</button>
         </div>
         <div class="product-card">
             <img src="image/manu/a8.jpg" alt="สินค้า 4" class="product-img">
             <div class="product-name">สินค้า D</div>
             <div class="product-price">฿1,800</div>
-            <a href="#" class="product-price-shop ">ซื้อสินค้า</a>
+            <button class="add-to-cart" data-name="สินค้า A" data-price="1000">เพิ่มลงตะกร้า</button>
         </div>
         <div class="product-card">
             <img src="image/manu/a10.jpg" alt="สินค้า 1" class="product-img">
             <div class="product-name">สินค้า A</div>
             <div class="product-price">฿1,000</div>
-            <a href="#" class="product-price-shop ">ซื้อสินค้า</a>
+            <button class="add-to-cart" data-name="สินค้า A" data-price="1000">เพิ่มลงตะกร้า</button>
         </div>
         <div class="product-card">
             <img src="image/manu/a11.jpg" alt="สินค้า 2" class="product-img">
             <div class="product-name">สินค้า B</div>
             <div class="product-price">฿1,200</div>
-            <a href="#" class="product-price-shop ">ซื้อสินค้า</a>
+            <button class="add-to-cart" data-name="สินค้า A" data-price="1000">เพิ่มลงตะกร้า</button>
         </div>
         <div class="product-card">
             <img src="image/manu/a12.jpg" alt="สินค้า 3" class="product-img">
             <div class="product-name">สินค้า C</div>
             <div class="product-price">฿1,500</div>
-            <a href="#" class="product-price-shop ">ซื้อสินค้า</a>
+            <button class="add-to-cart" data-name="สินค้า A" data-price="1000">เพิ่มลงตะกร้า</button>
         </div>
         <div class="product-card">
             <img src="image/manu/a13.jpg" alt="สินค้า 4" class="product-img">
             <div class="product-name">สินค้า D</div>
             <div class="product-price">฿1,800</div>
-            <a href="#" class="product-price-shop ">ซื้อสินค้า</a>
+            <button class="add-to-cart" data-name="สินค้า A" data-price="1000">เพิ่มลงตะกร้า</button>
         </div>
         <div class="product-card">
             <img src="image/manu/a14.jpg" alt="สินค้า 4" class="product-img">
             <div class="product-name">สินค้า D</div>
             <div class="product-price">฿1,800</div>
-            <a href="#" class="product-price-shop ">ซื้อสินค้า</a>
+            <button class="add-to-cart" data-name="สินค้า A" data-price="1000">เพิ่มลงตะกร้า</button>
 
         </div>
     </div>
+
+    <script>
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', function() {
+            const productName = this.getAttribute('data-name');
+            const price = this.getAttribute('data-price');
+
+            fetch('cart.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    body: `product_name=${productName}&price=${price}`
+                })
+                .then(response => response.json())
+                .then(data => alert(data.message))
+                .catch(error => console.error('Error:', error));
+        });
+    });
+    </script>
 
     <!-- ภาพแบนเนอร์ด้านล่าง -->
     <img src="image/Bottom.jpg" alt="Bottom Image" class="banner">
