@@ -1,4 +1,6 @@
 <?php
+session_start(); // เริ่มต้น session
+
 include('config.php');
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'];
@@ -12,12 +14,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
         $query = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
         if (mysqli_query($conn, $query)) {
-            $_SESSION['user_id'] = $user['id'];
-            $_SESSION['username'] = $user['username'];
-            header('Location: home.php');
-            exit();
+            $user_id = mysqli_insert_id($conn);
+
+            // ตรวจสอบว่า ID ถูกสร้างขึ้นจริง
+            if ($user_id) {
+                $_SESSION['user_id'] = $user_id;
+                $_SESSION['username'] = $username;
+                header("Location: home.php");
+                exit();
+            } else {
+                echo "เกิดข้อผิดพลาด ไม่สามารถกำหนด session ได้";
+            }
         } else {
-            echo "เกิดข้อผิดพลาด: " . $query . "<br>" . mysqli_error($conn);
+            echo "เกิดข้อผิดพลาด: " . mysqli_error($conn);
         }
     }
 }
