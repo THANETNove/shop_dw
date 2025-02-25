@@ -154,49 +154,49 @@ if (!isset($_SESSION['user_id'])) {
             <img src="image/manu/a6.jpg" alt="สินค้า 2" class="product-img">
             <div class="product-name">สินค้า B</div>
             <div class="product-price">฿1,200</div>
-            <button class="add-to-cart" data-name="สินค้า A" data-price="1000">เพิ่มลงตะกร้า</button>
+            <button class="add-to-cart" data-name="สินค้า B" data-price="1200">เพิ่มลงตะกร้า</button>
         </div>
         <div class="product-card">
             <img src="image/manu/a7.jpg" alt="สินค้า 3" class="product-img">
             <div class="product-name">สินค้า C</div>
             <div class="product-price">฿1,500</div>
-            <button class="add-to-cart" data-name="สินค้า A" data-price="1000">เพิ่มลงตะกร้า</button>
+            <button class="add-to-cart" data-name="สินค้า C" data-price="1500">เพิ่มลงตะกร้า</button>
         </div>
         <div class="product-card">
             <img src="image/manu/a8.jpg" alt="สินค้า 4" class="product-img">
             <div class="product-name">สินค้า D</div>
             <div class="product-price">฿1,800</div>
-            <button class="add-to-cart" data-name="สินค้า A" data-price="1000">เพิ่มลงตะกร้า</button>
+            <button class="add-to-cart" data-name="สินค้า D" data-price="1800">เพิ่มลงตะกร้า</button>
         </div>
         <div class="product-card">
             <img src="image/manu/a10.jpg" alt="สินค้า 1" class="product-img">
-            <div class="product-name">สินค้า A</div>
-            <div class="product-price">฿1,000</div>
-            <button class="add-to-cart" data-name="สินค้า A" data-price="1000">เพิ่มลงตะกร้า</button>
+            <div class="product-name">สินค้า F</div>
+            <div class="product-price">฿1,900</div>
+            <button class="add-to-cart" data-name="สินค้า F" data-price="1900">เพิ่มลงตะกร้า</button>
         </div>
         <div class="product-card">
             <img src="image/manu/a11.jpg" alt="สินค้า 2" class="product-img">
-            <div class="product-name">สินค้า B</div>
+            <div class="product-name">สินค้า L</div>
             <div class="product-price">฿1,200</div>
-            <button class="add-to-cart" data-name="สินค้า A" data-price="1000">เพิ่มลงตะกร้า</button>
+            <button class="add-to-cart" data-name="สินค้า L" data-price="1200">เพิ่มลงตะกร้า</button>
         </div>
         <div class="product-card">
             <img src="image/manu/a12.jpg" alt="สินค้า 3" class="product-img">
-            <div class="product-name">สินค้า C</div>
+            <div class="product-name">สินค้า G</div>
             <div class="product-price">฿1,500</div>
-            <button class="add-to-cart" data-name="สินค้า A" data-price="1000">เพิ่มลงตะกร้า</button>
+            <button class="add-to-cart" data-name="สินค้า G" data-price="1500">เพิ่มลงตะกร้า</button>
         </div>
         <div class="product-card">
             <img src="image/manu/a13.jpg" alt="สินค้า 4" class="product-img">
-            <div class="product-name">สินค้า D</div>
+            <div class="product-name">สินค้า K</div>
             <div class="product-price">฿1,800</div>
-            <button class="add-to-cart" data-name="สินค้า A" data-price="1000">เพิ่มลงตะกร้า</button>
+            <button class="add-to-cart" data-name="สินค้า K" data-price="1800">เพิ่มลงตะกร้า</button>
         </div>
         <div class="product-card">
             <img src="image/manu/a14.jpg" alt="สินค้า 4" class="product-img">
-            <div class="product-name">สินค้า D</div>
+            <div class="product-name">สินค้า U</div>
             <div class="product-price">฿1,800</div>
-            <button class="add-to-cart" data-name="สินค้า A" data-price="1000">เพิ่มลงตะกร้า</button>
+            <button class="add-to-cart" data-name="สินค้า A" data-price="1800">เพิ่มลงตะกร้า</button>
 
         </div>
     </div>
