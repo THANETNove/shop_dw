@@ -6,72 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forever Your Flowers</title>
     <style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f8f8f8;
-    }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
 
-    .container {
-        width: 100%;
-        max-width: 1200px;
-        margin: auto;
-    }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+        }
 
-    .header {
-        background: url('flowers.jpg') no-repeat center;
-        background-size: cover;
-        text-align: center;
-        color: white;
-        padding: 40px 0;
-        font-size: 28px;
-        font-weight: bold;
-    }
+        .header {
+            background: url('flowers.jpg') no-repeat center;
+            background-size: cover;
+            text-align: center;
+            color: white;
+            padding: 40px 0;
+            font-size: 28px;
+            font-weight: bold;
+        }
 
-    .menu {
-        width: 250px;
-        float: left;
-        background: url('menu-bg.jpg') repeat-y;
-        padding: 0;
-    }
-
-
-    .menu img {
-        display: block;
-        width: 100%;
-        height: auto;
-        margin-bottom: 5px;
-        cursor: pointer;
-        margin-top: 16px;
-    }
-
-    .menu a:hover {
-        background: rgba(255, 255, 255, 0.3);
-    }
-
-    .content {
-        margin-left: 260px;
-        background: #fdd;
-        padding: 20px;
-        min-height: 400px;
-    }
-
-    .footer {
-        background: url('flowers.jpg') no-repeat center;
-        background-size: cover;
-        text-align: center;
-        color: white;
-        padding: 20px;
-        font-size: 16px;
-    }
+        .menu {
+            width: 250px;
+            float: left;
+            background: url('menu-bg.jpg') repeat-y;
+            padding: 0;
+        }
 
 
-    /* กำหนดให้รูปภาพแบนเนอร์เต็มจอ */
-    .banner {
-        width: 100%;
-        display: block;
-    }
+        .menu img {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin-bottom: 5px;
+            cursor: pointer;
+            margin-top: 16px;
+        }
+
+        .menu a:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .content {
+            margin-left: 260px;
+            background: #fdd;
+            padding: 20px;
+            min-height: 400px;
+        }
+
+        .footer {
+            background: url('flowers.jpg') no-repeat center;
+            background-size: cover;
+            text-align: center;
+            color: white;
+            padding: 20px;
+            font-size: 16px;
+        }
+
+
+        /* กำหนดให้รูปภาพแบนเนอร์เต็มจอ */
+        .banner {
+            width: 100%;
+            display: block;
+        }
     </style>
 </head>
 
@@ -95,9 +95,9 @@
             <img src="image/Payment.jpg" alt="จัดจำหน่ายส่งออนไลน์">
         </div>
         <div class="content">
-            <p style="text-align: center; font-size: 18px;">โปรโมชั่นเดือนกุมภาพันธ์ - มีนาคม ซื้อดอกไม้หน้าร้าน Forever
-                Your Flowers หรือทางออนไลน์<br>
-                ครบ 899 ขึ้นไป</p>
+            <p style="text-align: center; font-size: 18px;">โปรโมชั่นเดือนกุมภาพันธ์ - มีนาคม เนื้อวัวเเช่เเข็ง
+                หรือทางออนไลน์<br>
+                ครบ 599 ขึ้นไป</p>
         </div>
         <div class="footer">
             999 ม.1 ต.กัลปาสีคาม อ.เมืองสระแก้ว จ.สระแก้ว 27000<br>
