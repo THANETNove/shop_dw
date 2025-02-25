@@ -80,8 +80,8 @@ if (!isset($_SESSION['username'])) {
     }
 
     .product-img {
-        width: 100%;
-        height: auto;
+        width: 250px;
+        height: 250px;
         border-radius: 8px;
     }
 
@@ -95,7 +95,28 @@ if (!isset($_SESSION['username'])) {
         color: #ff5733;
         font-size: 16px;
         font-weight: bold;
+        padding: 24px;
     }
+
+    .product-price-shop {
+        display: inline-block;
+        background-color: #ff5733;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 12px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .product-price-shop :hover {
+        background-color: #e64c2e;
+    }
+
+
+
 
     /* Responsive design สำหรับมือถือ */
     @media (max-width: 768px) {
@@ -127,21 +148,56 @@ if (!isset($_SESSION['username'])) {
             <img src="image/manu/a1.jpg" alt="สินค้า 1" class="product-img">
             <div class="product-name">สินค้า A</div>
             <div class="product-price">฿1,000</div>
+            <a href="https://www.yourshop.com/product1" class="product-price">฿1,000</a>
         </div>
         <div class="product-card">
             <img src="image/manu/a6.jpg" alt="สินค้า 2" class="product-img">
             <div class="product-name">สินค้า B</div>
             <div class="product-price">฿1,200</div>
+            <a href="https://www.yourshop.com/product1" class="product-price-shop ">ซื้อสินค้า</a>
         </div>
         <div class="product-card">
             <img src="image/manu/a7.jpg" alt="สินค้า 3" class="product-img">
             <div class="product-name">สินค้า C</div>
             <div class="product-price">฿1,500</div>
+            <a href="https://www.yourshop.com/product1" class="product-price-shop ">ซื้อสินค้า</a>
         </div>
         <div class="product-card">
             <img src="image/manu/a8.jpg" alt="สินค้า 4" class="product-img">
             <div class="product-name">สินค้า D</div>
             <div class="product-price">฿1,800</div>
+            <a href="https://www.yourshop.com/product1" class="product-price-shop ">ซื้อสินค้า</a>
+        </div>
+        <div class="product-card">
+            <img src="image/manu/a10.jpg" alt="สินค้า 1" class="product-img">
+            <div class="product-name">สินค้า A</div>
+            <div class="product-price">฿1,000</div>
+            <a href="https://www.yourshop.com/product1" class="product-price-shop ">ซื้อสินค้า</a>
+        </div>
+        <div class="product-card">
+            <img src="image/manu/a11.jpg" alt="สินค้า 2" class="product-img">
+            <div class="product-name">สินค้า B</div>
+            <div class="product-price">฿1,200</div>
+            <a href="https://www.yourshop.com/product1" class="product-price-shop ">ซื้อสินค้า</a>
+        </div>
+        <div class="product-card">
+            <img src="image/manu/a12.jpg" alt="สินค้า 3" class="product-img">
+            <div class="product-name">สินค้า C</div>
+            <div class="product-price">฿1,500</div>
+            <a href="https://www.yourshop.com/product1" class="product-price-shop ">ซื้อสินค้า</a>
+        </div>
+        <div class="product-card">
+            <img src="image/manu/a13.jpg" alt="สินค้า 4" class="product-img">
+            <div class="product-name">สินค้า D</div>
+            <div class="product-price">฿1,800</div>
+            <a href="https://www.yourshop.com/product1" class="product-price-shop ">ซื้อสินค้า</a>
+        </div>
+        <div class="product-card">
+            <img src="image/manu/a14.jpg" alt="สินค้า 4" class="product-img">
+            <div class="product-name">สินค้า D</div>
+            <div class="product-price">฿1,800</div>
+            <a href="https://www.yourshop.com/product1" class="product-price-shop ">ซื้อสินค้า</a>
+
         </div>
     </div>
 
