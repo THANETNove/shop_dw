@@ -6,83 +6,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ร้านขายดอกไม้</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f8f8f8;
-        }
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f8f8f8;
+    }
 
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
+    .container {
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
-        .product {
-            background: white;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            width: 250px;
-            margin: 10px;
-            padding: 10px;
-            text-align: center;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-        }
+    .product {
+        background: white;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        width: 250px;
+        margin: 10px;
+        padding: 10px;
+        text-align: center;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    }
 
-        .product img {
-            width: 100%;
-            border-radius: 8px;
-        }
+    .product img {
+        width: 100%;
+        border-radius: 8px;
+    }
 
-        .product h3 {
-            font-size: 18px;
-            margin: 10px 0;
-        }
+    .product h3 {
+        font-size: 18px;
+        margin: 10px 0;
+    }
 
-        .product p {
-            font-size: 16px;
-            color: #555;
-        }
+    .product p {
+        font-size: 16px;
+        color: #555;
+    }
 
-        .product button {
-            background-color: #ff6f61;
-            color: white;
-            border: none;
-            padding: 10px;
-            width: 100%;
-            cursor: pointer;
-            border-radius: 5px;
-            font-size: 16px;
-        }
+    .product button {
+        background-color: #ff6f61;
+        color: white;
+        border: none;
+        padding: 10px;
+        width: 100%;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+    }
 
-        .product button:hover {
-            background-color: #e65c50;
-        }
+    .product button:hover {
+        background-color: #e65c50;
+    }
 
-        .product-img {
-            width: 250px;
-            height: 250px;
-            border-radius: 8px;
-        }
+    .product-img {
+        width: 250px;
+        height: 250px;
+        border-radius: 8px;
+    }
 
-        .back-button {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background-color: #555;
-            color: white;
-            padding: 10px 15px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 16px;
-        }
+    .back-button {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: #555;
+        color: white;
+        padding: 10px 15px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 16px;
+    }
 
-        .back-button:hover {
-            background-color: #333;
-        }
+    .back-button:hover {
+        background-color: #333;
+    }
     </style>
 </head>
 
@@ -105,9 +105,9 @@
         </div>
         <div class="product">
             <img src="image/manu/a5.jpg" alt="Graceful Love" class="product-img">
-            <h3>เเนื้อสันนอก แช่แข็ง นิวซีแลนด์ ตัดสเต๊ก-พรีเมียม /h3>
-                <p>ราคา: 200 บาท <span>ลดเหลือ</p>
-                <button>สั่งซื้อ</button>
+            <h3>เเนื้อสันนอก แช่แข็ง นิวซีแลนด์ ตัดสเต๊ก-พรีเมียม </h3>
+            <p>ราคา: 200 บาท <span>ลดเหลือ</p>
+            <button>สั่งซื้อ</button>
         </div>
         <div class="product">
             <img src="image/manu/a6.jpg" alt="Graceful Love" class="product-img">
