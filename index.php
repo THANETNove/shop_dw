@@ -1,55 +1,107 @@
-<?php
-session_start();
-include('config.php'); // ไฟล์เชื่อมต่อฐานข้อมูล
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-
-    // ป้องกัน SQL Injection
-    $username = mysqli_real_escape_string($conn, $username);
-    $password = mysqli_real_escape_string($conn, $password);
-
-    // ตรวจสอบข้อมูลผู้ใช้
-    $query = "SELECT * FROM users WHERE username='$username' LIMIT 1";
-    $result = mysqli_query($conn, $query);
-    $user = mysqli_fetch_assoc($result);
-
-    if ($user && password_verify($password, $user['password'])) {
-        $_SESSION['user_id'] = $user['id'];
-        $_SESSION['username'] = $user['username'];
-        header('Location: home.php');
-        exit();
-    } else {
-        $error = "ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง";
-    }
-}
-?>
-
 <!DOCTYPE html>
 <html lang="th">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>เข้าสู่ระบบ - ร้านค้า</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Forever Your Flowers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .header {
+            background: url('flowers.jpg') no-repeat center;
+            background-size: cover;
+            text-align: center;
+            color: white;
+            padding: 40px 0;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .menu {
+            width: 250px;
+            float: left;
+            background: url('menu-bg.jpg') repeat-y;
+            padding: 0;
+        }
+
+
+        .menu img {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin-bottom: 5px;
+            cursor: pointer;
+            margin-top: 16px;
+        }
+
+        .menu a:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .content {
+            margin-left: 260px;
+            background: #fdd;
+            padding: 20px;
+            min-height: 400px;
+        }
+
+        .footer {
+            background: url('flowers.jpg') no-repeat center;
+            background-size: cover;
+            text-align: center;
+            color: white;
+            padding: 20px;
+            font-size: 16px;
+        }
+
+
+        /* กำหนดให้รูปภาพแบนเนอร์เต็มจอ */
+        .banner {
+            width: 100%;
+            display: block;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="login-container">
-        <h2>เข้าสู่ระบบ</h2>
-        <?php if (isset($error)) echo "<p style='color:red;'>$error</p>"; ?>
-        <form action="index.php" method="POST">
-            <label for="username">ชื่อผู้ใช้:</label>
-            <input type="text" name="username" required>
+    <div class="container">
 
-            <label for="password">รหัสผ่าน:</label>
-            <input type="password" name="password" required>
+        <!-- ภาพแบนเนอร์ด้านบน -->
+        <img src="image/Head-Banner.jpg" alt="Head Banner" class="banner">
 
-            <button type="submit">เข้าสู่ระบบ</button>
-        </form>
-        <p>ยังไม่มีบัญชี? <a href="register.php">สมัครสมาชิก</a></p>
+        <div class="menu">
+            <img src="image/Register.jpg" alt="เข้าสู่ระบบสมาชิก">
+            <a href="frozen_beef.php">
+                <img src="image/Freeze-Meat.jpg" alt="เนื้อวัวเเช่เเข็ง">
+            </a>
+            <a href="shop_sale.php">
+                <img src="image/Meat-Sale.jpg" alt="เนื้อวัวลดราคา">
+            </a>
+            <img src="image/online.jpg" alt="จัดจำหน่ายสินค้าออนไลน์">
+            <img src="image/Payment.jpg" alt="จัดจำหน่ายส่งออนไลน์">
+        </div>
+        <div class="content">
+            <p style="text-align: center; font-size: 18px;">โปรโมชั่นเดือนกุมภาพันธ์ - มีนาคม ซื้อดอกไม้หน้าร้าน Forever
+                Your Flowers หรือทางออนไลน์<br>
+                ครบ 899 ขึ้นไป</p>
+        </div>
+        <div class="footer">
+            999 ม.1 ต.กัลปาสีคาม อ.เมืองสระแก้ว จ.สระแก้ว 27000<br>
+            อีเมล: 999kxqarmjuwfl@gmail.com
+        </div>
+        <img src="image/Bottom.jpg" alt="Bottom Image" class="banner">
     </div>
 </body>
 
