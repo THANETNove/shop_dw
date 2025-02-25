@@ -129,6 +129,44 @@ if (!isset($_SESSION['user_id'])) {
             width: 90%;
         }
     }
+
+    .add-to-cart {
+        display: inline-block;
+        background-color: #ff9800;
+        /* สีส้ม */
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.2s ease;
+        text-decoration: none;
+        margin-top: 10px;
+    }
+
+    .add-to-cart:hover {
+        background-color: #e68900;
+        /* สีส้มเข้มขึ้น */
+        transform: scale(1.05);
+        /* ขยายปุ่มเล็กน้อย */
+    }
+
+    .add-to-cart:active {
+        transform: scale(0.95);
+        /* กดแล้วปุ่มจะเล็กลงเล็กน้อย */
+    }
+
+    /* ปรับขนาดสำหรับมือถือ */
+    @media (max-width: 768px) {
+        .add-to-cart {
+            width: 90%;
+            /* ปรับให้เต็มจอมากขึ้น */
+            font-size: 18px;
+            padding: 12px 20px;
+        }
+    }
     </style>
 </head>
 
@@ -136,7 +174,9 @@ if (!isset($_SESSION['user_id'])) {
 
     <!-- ปุ่ม Logout -->
     <div class="logout-container">
-        <a href="logout.php" class="logout-btn">ออกจากระบบ</a>
+        <a href="cart_display.php" class="cart-btn">🛒 ตะกร้าสินค้า</a>
+        <a href="order_history.php" class="order-history-btn">📜 ประวัติการสั่งซื้อ</a>
+        <a href="logout.php" class="logout-btn">🚪 ออกจากระบบ</a>
     </div>
 
     <!-- ภาพแบนเนอร์ด้านบน -->

@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $check_query = "SELECT * FROM users WHERE username='$username' LIMIT 1";
     $check_result = mysqli_query($conn, $check_query);
     if (mysqli_num_rows($check_result) > 0) {
-        echo "ชื่อผู้ใช้นี้มีอยู่แล้ว";
+        $error = "ชื่อผู้ใช้นี้มีอยู่แล้ว";
     } else {
         $query = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
         if (mysqli_query($conn, $query)) {
