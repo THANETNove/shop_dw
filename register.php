@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if ($user_id) {
                 $_SESSION['user_id'] = $user_id;
                 $_SESSION['username'] = $username;
-                header("Location: home.php");
+                header("Location: online.php");
                 exit();
             } else {
                 echo "เกิดข้อผิดพลาด ไม่สามารถกำหนด session ได้";
@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             <button type="submit" class="btn-register">สมัครสมาชิก</button>
         </form>
-        <p>มีบัญชีอยู่แล้ว? <a href="index.php">เข้าสู่ระบบ</a></p>
+        <p>มีบัญชีอยู่แล้ว? <a href="login.php">เข้าสู่ระบบ</a></p>
     </div>
 </body>
 

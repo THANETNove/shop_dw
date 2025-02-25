@@ -4,7 +4,7 @@ session_start(); // เริ่มต้น session
 
 // ตรวจสอบว่าผู้ใช้ล็อกอินหรือไม่
 if (!isset($_SESSION['user_id'])) {
-    header("Location: index.php"); // ถ้ายังไม่ login ให้ไปหน้า login
+    header("Location: login.php"); // ถ้ายังไม่ login ให้ไปหน้า login
     exit();
 }
 ?>

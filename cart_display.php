@@ -3,7 +3,7 @@ session_start();
 include('config.php'); // เชื่อมต่อฐานข้อมูล
 
 if (!isset($_SESSION['user_id'])) {
-    header("Location: index.php");
+    header("Location: login.php");
     exit();
 }
 

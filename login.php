@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($user && password_verify($password, $user['password'])) {
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['username'] = $user['username'];
-        header('Location: home.php');
+        header('Location: online.php');
         exit();
     } else {
         $error = "ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง";
@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class="login-container">
         <h2>เข้าสู่ระบบ</h2>
         <?php if (isset($error)) echo "<p style='color:red;'>$error</p>"; ?>
-        <form action="index.php" method="POST">
+        <form action="login.php" method="POST">
             <label for="username">ชื่อผู้ใช้:</label>
             <input type="text" name="username" required>
 
@@ -50,6 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <button type="submit">เข้าสู่ระบบ</button>
         </form>
         <p>ยังไม่มีบัญชี? <a href="register.php">สมัครสมาชิก</a></p>
+        <a href="index.php">กลับหน้าแรก</a>
     </div>
 </body>
 
