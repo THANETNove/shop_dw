@@ -4,7 +4,7 @@ session_start(); // เริ่มต้น session
 
 // ตรวจสอบว่าผู้ใช้ล็อกอินหรือไม่
 if (!isset($_SESSION['user_id'])) {
-    header("Location: login.php"); // ถ้ายังไม่ login ให้ไปหน้า login
+    header("Location: index.php"); // ถ้ายังไม่ login ให้ไปหน้า login
     exit();
 }
 ?>
@@ -167,6 +167,56 @@ if (!isset($_SESSION['user_id'])) {
             padding: 12px 20px;
         }
     }
+
+    /* ปรับแบนเนอร์เป็นข้อความ */
+    .banner-text {
+        width: 100%;
+        height: 150px;
+        /* ปรับความสูง */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ff9800;
+        /* สีพื้นหลัง */
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    /* ปรับแบนเนอร์สำหรับมือถือ */
+    @media (max-width: 768px) {
+        .banner-text {
+            height: 180px;
+            /* ลดความสูงลง */
+            font-size: 24px;
+            /* ลดขนาดตัวอักษร */
+        }
+    }
+
+    /* Footer */
+    .footer {
+        width: 100%;
+        background-color: #333;
+        /* พื้นหลังสีเทาเข้ม */
+        color: white;
+        /* ตัวอักษรสีขาว */
+        text-align: center;
+        padding: 15px 0;
+        font-size: 14px;
+        margin-top: 30px;
+        position: relative;
+        bottom: 0;
+    }
+
+    /* ปรับขนาดสำหรับมือถือ */
+    @media (max-width: 768px) {
+        .footer {
+            font-size: 12px;
+            padding: 10px 0;
+        }
+    }
     </style>
 </head>
 
@@ -180,8 +230,9 @@ if (!isset($_SESSION['user_id'])) {
     </div>
 
     <!-- ภาพแบนเนอร์ด้านบน -->
-    <img src="image/Head-Banner.jpg" alt="Head Banner" class="banner">
-
+    <div class="banner-text">
+        <h1>จำหน่ายเนื้อแช่แข็ง</h1>
+    </div>
     <!-- ส่วนของสินค้า -->
     <div class="product-container">
         <div class="product-card">
@@ -261,8 +312,10 @@ if (!isset($_SESSION['user_id'])) {
     });
     </script>
 
-    <!-- ภาพแบนเนอร์ด้านล่าง -->
-    <img src="image/Bottom.jpg" alt="Bottom Image" class="banner">
+    <!-- Footer -->
+    <footer class="footer">
+        <p>เว็บไซต์นี้จัดทำขึ้นโดย นายธัญพิสิษฐ์ เกิดพุ่ม | รหัสนักศึกษา: 653485017 | หมู่เรียน: 26.16</p>
+    </footer>
 
 </body>
 
