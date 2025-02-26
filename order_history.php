@@ -3,7 +3,7 @@ session_start();
 include('config.php');
 
 if (!isset($_SESSION['user_id'])) {
-    header("Location: login.php");
+    header("Location: index.php");
     exit();
 }
 
@@ -98,7 +98,7 @@ $result = mysqli_query($conn, $query);
         <?php if (mysqli_num_rows($result) == 0): ?>
         <p class="empty-history">ยังไม่มีประวัติการสั่งซื้อ</p>
         <div class="btn-container">
-            <a href="index.php" class="btn">🏠 กลับหน้าแรก</a>
+            <a href="home.php" class="btn">🏠 กลับหน้าแรก</a>
         </div>
         <?php else: ?>
         <table>

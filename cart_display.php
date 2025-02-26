@@ -3,7 +3,7 @@ session_start();
 include('config.php'); // เชื่อมต่อฐานข้อมูล
 
 if (!isset($_SESSION['user_id'])) {
-    header("Location: login.php");
+    header("Location: index.php");
     exit();
 }
 
@@ -112,7 +112,7 @@ $result = mysqli_query($conn, $query);
         <?php if (mysqli_num_rows($result) == 0): ?>
         <p class="empty-cart">ไม่มีสินค้าในตะกร้า</p>
         <div class="btn-container">
-            <a href="index.php" class="btn">กลับไปซื้อสินค้า</a>
+            <a href="home.php" class="btn">กลับไปซื้อสินค้า</a>
         </div>
         <?php else: ?>
         <table>
